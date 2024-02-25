@@ -137,7 +137,7 @@ const ProductDetailPage: FC = () => {
             </div>
           )}
           <Popup trigger=
-                {<button
+                {<button hidden={true}
                   className="w-[424px] h-[56px] bg-[#E4FF3F] rounded-[50px] font-semibold text-[16px] text-[#000000] "
                   onClick={upgradeData}
                 > Checkout test pop up</button>}
