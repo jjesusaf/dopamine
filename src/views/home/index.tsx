@@ -9,7 +9,7 @@ import UserProfile from "./UserProfile";
 export const HomeView: FC = ({}) => {
 
   return (
-    <div className="flex mt-[86px] mr-[40px] ml-[40px] justify-between">
+    <div className="flex justify-center mt-[86px] mr-[40px] ml-[40px] md:justify-between flex-wrap">
      <UserProfile/>
      <ProductGallery/>
     </div>
