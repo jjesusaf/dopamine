@@ -47,7 +47,7 @@ export const AppBar: React.FC = () => {
               </svg>
             </Link>
           </div>
-          <WalletMultiButtonDynamic className="btn-ghost btn-sm relative flex md:hidden text-lg " />
+          <WalletMultiButtonDynamic className="w-[190px] h-[33px] bg-[#E4FF3F] " />
         </div>
 
         {/* Nav Links */}

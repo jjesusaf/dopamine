@@ -8,12 +8,12 @@ const NetworkSwitcher: FC = () => {
   console.log(networkConfiguration);
 
   return (
-    <label className="cursor-pointer label">
+    <label className="flex w-full justify-between items-center">
       <a>Network</a>
       <select             
         value={networkConfiguration}
         onChange={(e) => setNetworkConfiguration(e.target.value)} 
-        className="select max-w-xs"
+        className="select max-w-xs bg-[#E4FF3F] text-[#000000]"
       >
         <option value="mainnet-beta">main</option>
         <option value="devnet">dev</option>
