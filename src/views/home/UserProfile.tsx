@@ -6,7 +6,8 @@ import dynamic from "next/dynamic";
 import NetworkSwitcher from "../../components/NetworkSwitcher";
 
 const WalletMultiButtonDynamic = dynamic(
-  () => import("@solana/wallet-adapter-react-ui").then((mod) => mod.WalletMultiButton),
+  async () =>
+    (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
   { ssr: false }
 );
 
@@ -17,11 +18,11 @@ const UserProfile: FC = () => {
     <div className="flex w-[30%] flex-col gap-[30px]">
       <div className="rounded-[100%] w-[108px] h-[108px] relative">
         <Image
-          className="rounded-[20px]"
           src="/Switch.png"
           alt="Descripción de la imagen"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
+          sizes="100vw"
         />
       </div>
       <div className="flex items-center gap-[75px]">
@@ -34,8 +35,8 @@ const UserProfile: FC = () => {
         <i className="ri-more-fill"></i>
       </div>
       <p className="text-[14px] text-[#FFFFFF] font-normal">
-        Somos partidarios y creemos en los principios criptopunks así como en
-        la criptoeconomia, el blockchain y la descentralización. ⛓
+        Somos partidarios y creemos en los principios criptopunks así como en la
+        criptoeconomia, el blockchain y la descentralización. ⛓
       </p>
       <div className="flex gap-[40px] p-[16px] justify-center border-t-[1px] border-b-[1px]">
         <div className="flex flex-col items-center">
@@ -44,7 +45,9 @@ const UserProfile: FC = () => {
         </div>
         <div className="flex flex-col items-center">
           <span className="text-[16px] font-bold text-[#FFFFFF]">247</span>
-          <span className="text-[#93989A] font-medium text-[14px]">Following</span>
+          <span className="text-[#93989A] font-medium text-[14px]">
+            Following
+          </span>
         </div>
         <div className="flex flex-col items-center">
           <span className="text-[16px] font-bold text-[#FFFFFF]">1,542</span>
