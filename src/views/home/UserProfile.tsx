@@ -54,14 +54,14 @@ const UserProfile: FC = () => {
           <span className="text-[#93989A] font-medium text-[14px]">items</span>
         </div>
       </div>
-      <div className="flex flex-col items-center gap-[30px]">
+      <div className="flex flex-col text-[#F5F7FA] items-center gap-[30px]">
         <label className="flex w-full justify-between items-center">
           <span>Autoconnect</span>
           <input
             type="checkbox"
             checked={autoConnect}
             onChange={(e) => setAutoConnect(e.target.checked)}
-            className="toggle bg-[#E4FF3F]"
+            className="toggle"
           />
         </label>
         <NetworkSwitcher />

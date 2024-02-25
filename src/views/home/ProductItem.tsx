@@ -1,7 +1,6 @@
 // src/views/home/ProductItem.tsx
 import { FC } from "react";
 import Image from "next/image";
-
 interface ProductItemProps {
   id: number;
   name: string;
@@ -16,10 +15,11 @@ const ProductItem: FC<ProductItemProps> = ({
   src,
   collection,
   price,
+
 }) => {
   const isPriority = true;
   return (
-    <div key={id} className="w-[304.36px] h-[397px] rounded-[20px] relative">
+    <div key={id} className="w-[304.36px] h-[397px] rounded-[20px] relative" >
       <Image
         className="rounded-20"
          src={src}
@@ -30,7 +30,7 @@ const ProductItem: FC<ProductItemProps> = ({
          priority={isPriority}
       />
       <div className="p-4 absolute bottom-0 w-full h-[117px] rounded-b-20 bg-black bg-opacity-20 backdrop-blur-67">
-        <h3 className="text-[16px] font-bold">{name}</h3>
+        <h3 className="text-[16px] text-[#F5F7FA] font-bold">{name}</h3>
         <div className="flex items-center justify-between my-2">
           <div className="rounded-full bg-[#F8F9C1] w-[32px] h-[32px]"></div>
           <div className="flex flex-col">
