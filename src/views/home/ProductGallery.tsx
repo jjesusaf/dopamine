@@ -8,7 +8,7 @@ const ProductGallery: FC = () => {
   return (
     <div className="flex flex-col gap-[40px]">
       {/* ...otros elementos... */}
-      <div className="grid grid-cols-2 gap-[34px] justify-evenly mb-[60px]">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-[34px] justify-evenly mb-[60px]">
         {productsData.map((product) => (
           <Link href={`/product/${product.id}`} passHref key={product.id}>        
               <ProductItem {...product} />      

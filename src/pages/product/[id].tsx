@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React, { useState, useMemo, useRef, useEffect, FC } from "react";
 import productsData from "../../data/productsData";
 import { Product } from "../../types/productTypes";
+import Link from "next/link";
 
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
@@ -79,12 +80,14 @@ const ProductDetailPage: FC = () => {
         <h1 className="text-[20px] font-medium text-[#FFFFFF] font-sans">
           {product.name}
         </h1>
-        <i
-          className="ri-close-line"
-          style={{ width: "24px", height: "24px", color: "#FFFFFF" }}
-        ></i>
+        <Link href={"/"}>
+          <i
+            className="ri-close-line"
+            style={{ fontSize: "24px", color: "#FFFFFF" }}
+          ></i>
+        </Link>
       </div>
-      <div className="flex w-full justify-between">
+      <div className="flex flex-col md:flex-row w-full justify-between">
         <div className="">
           <img
             src={product.src}
@@ -125,7 +128,7 @@ const ProductDetailPage: FC = () => {
               <h1 className="text-[18px] font-medium text-[#FFFFFF]">Color</h1>
               <select
                 id="color"
-                className=" flex border bg-transparent text-[#FFFFFF] w-[424px] h-[56px] border-gray-300 rounded-[10px]  "
+                className=" flex border bg-transparent text-[#FFFFFF] w-[300px] md:w-[424px] h-[56px] border-gray-300 rounded-[10px]  "
               >
                 {product.colorOptions.map((color, index) => (
                   <option key={index}>{color}</option>
