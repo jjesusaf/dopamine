@@ -119,11 +119,17 @@ export default function Checkout() {
     <div className="flex flex-col items-center gap-8">
       
 
-      <button onClick={upgradeData}>Show QR - Test</button> 
+      <button 
+        className="w-[424px] h-[56px] bg-[#E4FF3F] rounded-[50px] font-semibold text-[16px] text-[#000000] " 
+        onClick={upgradeData}
+      >Show QR</button> 
 
 
       {/* div added to display the QR code */}
-      <div ref={qrRef} />
+      <div 
+        className="w-[424px] h-[430px] bg-[#E4FF3F] rounded-[50px] font-semibold text-[16px] text-[#000000] " 
+        ref={qrRef} 
+      />
     </div>
   )
 }
